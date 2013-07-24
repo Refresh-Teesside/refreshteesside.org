@@ -7,16 +7,21 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *
  *= require_self
  *= require_tree .
  */
 
-// partials
-@import 'partials/base.css.sass'
-@import 'partials/typography.css.sass'
 
-// modules
-@import 'modules/colors.css.sass'
+// compass
+// @include 'compass/reset'
 
 // vendor
+// @import 'vendor/normalize.css'
+
+// modules
+// @import 'modules/color.css.sass'
+
+// partials
+@import 'partials/base.sass'
+@import 'partials/typography.sass'
+@import 'partials/button.sass'

@@ -1,0 +1,73 @@
+/*
+ * _base.css.sass
+ * Author: Timothy Gale
+ * Date: 19/07/13
+ *
+ * Define all global variables, mixins and base styles for the project.
+ */
+
+/*
+ * global variables
+ */
+
+// fonts
+$primary-serif: serif
+$primary-sans-serif: sans-serif // ommitting specific fonts ensures optimal rendering across operating systems
+
+// paddding
+$narrow-padding: 10px
+$regular-padding: 20px
+$wide-padding: 30px
+
+
+/*
+ * mixins 
+ */
+
+// border radius
+=border-radius($radius)
+	:-moz-border-radius $radius + px
+	:-webkit-border-radius $radius + px
+	:border-radius $radius + px
+
+/*
+ * base styles
+ */
+
+// clearfix
+.clearfix:after
+	:visibility hidden
+	:display block
+	:font-size 0
+	:content " "
+	:clear both
+	:height 0
+
+.clearfix
+	:display inline-block
+
+/* start comment backslash hack \*/
+* html .clearfix
+	:height 1%
+
+.clearfix
+	:display block
+/* close comment backslash hack */
+
+
+// floats
+.float-left, .fl
+	:float left
+
+.float-right, .fr
+	:float right
+
+
+// selection highlight
+::-moz-selection
+	:background #b3d4fc
+	:text-shadow none
+
+::selection
+	:background #b3d4fc
+	:text-shadow none
