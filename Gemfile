@@ -38,7 +38,7 @@ gem 'haml'
 gem 'mongoid', github: 'mongoid/mongoid'
 
 # Use Compass
-gem 'compass-rails'
+# gem 'compass-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
