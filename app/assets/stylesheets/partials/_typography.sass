@@ -1,22 +1,27 @@
 /*
- * _typography.css.sass
+ * _typography.sass
  * Author: Timothy Gale
  * Date: 19/07/13
  *
  * Define typographical properties for the project.
  */
 
-// $primary-sans-serif: sans-serif
-
 body
 	:font-size 62.5% // define global font size as 62.5% - 1rem = 10px
 
-// headings
+/* 
+ * headings
+ */
+
 h1, h2, h3, h4, h5, h6
 	:font-family $primary-sans-serif
+	:font-style normal
+	:text-transform uppercase
+	:letter-spacing 1px
 
 h1
 	:line-height 1.5em
+	:margin 0
 
 h2
 	:line-height 1.5em
@@ -32,3 +37,39 @@ h5
 
 h6
 	:line-height 1.5em
+
+.sub-heading
+	:font-size 1.7rem
+	:font-weight 700
+
+
+/*
+ * paragraphs
+ */
+
+p
+	:font-size 1.2rem
+	:line-height 1.8em
+	:font-family $primary-sans-serif
+	:font-weight 300
+	:padding $regular-spacing 0
+
+
+/*
+ * anchors
+ */
+
+a
+	:text-decoration none
+	:color $secondary-color
+
+a:hover
+	:text-decoration underline
+
+.highlight
+	:color $secondary-color
+	:font-size 1.4rem
+	:font-family $primary-sans-serif
+	:background $quarternary-color
+	:padding $regular-spacing - 2
+	:margin 0 $regular-spacing

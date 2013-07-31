@@ -1,0 +1,16 @@
+/*
+ * _mixins.sass
+ * Author: Timothy Gale
+ * Date: 19/07/13
+ *
+ * Define global mixins used throughout the project.
+ */
+
+/*
+ * border radius
+ */
+
+=border-radius($radius)
+	:-moz-border-radius $radius + px
+	:-webkit-border-radius $radius + px
+	:border-radius $radius + px

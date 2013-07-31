@@ -1,5 +1,5 @@
 /*
- * _button.css.sass
+ * _button.sass
  * Author: Timothy Gale
  * Date: 19/07/13
  *
@@ -7,9 +7,16 @@
  */
 
 // sample button
-// .btn
-// 	:color $tertiary-color
-// 	:background $secondary-color
-// 	:font $primary-sans-serif
-// 	:padding $regular-padding
-// 	+border-radius(10)
+.btn
+	:color $tertiary-color
+	:background $secondary-color
+	:font-family $primary-sans-serif
+	:font-weight 300
+	:text-transform uppercase
+	:padding $regular-spacing $regular-spacing * 2
+	:text-decoration none
+	:font-size 1.5rem
+	:letter-spacing 1px
+	:display inline-block
+	+border-radius(3)
+	:box-shadow 0px 1px 1px rgba(0, 0, 0, .7)

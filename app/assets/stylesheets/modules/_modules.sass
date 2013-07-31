@@ -1,0 +1,202 @@
+/*
+ * _modules.css.sass
+ * Author: Timothy Gale
+ * Date: 19/07/13
+ *
+ * Handles all module components.
+ */
+
+ /*
+  * wrapper
+  */
+
+.wrapper
+	:margin $wide-spacing auto
+	:width 80%
+	:padding $wide-spacing * 2 $wide-spacing
+	+border-radius(3)
+	@extend .clearfix
+
+.wrapper.wrapper--lead
+	:background $tertiary-color
+	
+.wrapper.wrapper--full-width
+	:width 100%
+	:padding $wide-spacing 0
+
+.wrapper.wrapper--temp
+	:background #333 
+
+.wrapper.wrapper--banner
+	@extend .wrapper
+	:padding 0
+	:width 64%
+
+
+/* 
+ * event
+ */
+
+.event
+	:margin 0 auto
+	:text-align center
+	@extend .clearfix
+
+.event__title
+	:font-family $primary-sans-serif
+	:font-size 2.5rem
+	:font-weight 700
+	:letter-spacing 2px
+	:color $quinary-color
+
+.event__date
+	:text-align center
+	:font-size 1.2rem
+	:padding $regular-spacing 0
+
+// event intro
+
+.event-intro
+	@extend .clearfix
+	:padding 0 0 $wide-spacing 0
+
+.event-intro__summary
+	@extend .float-left
+	:width 70%
+
+.event-intro__schedule
+	@extend .float-right
+	:width 20%
+
+.event-intro__schedule__title
+	:margin $regular-spacing 0
+
+/* 
+ * speakers
+ */
+
+.speaker
+	:width 20%
+	:background #333
+	@extend .float-left
+	:margin 6% 0 5% 4%
+	:max-height 276px
+	:min-height 276px
+	:position relative
+	:overflow hidden
+	+border-radius(3)
+
+.speaker__photo
+	:width 100%
+
+.speaker__name
+	:position absolute
+	:bottom 0
+	:background rgba(0, 0, 0, .5)
+	:width 100%
+	:text-align left
+	:padding 5% 0 5% 5%
+	:color $tertiary-color
+	:font-size 1.1rem
+
+// speaker info
+
+.speaker-info
+	:text-align left
+	:padding 0 4%
+
+.speaker-info__name
+	:text-align left
+
+.speaker-info__bio
+	@extend .float-left
+	:width 70%
+
+// speaker contact
+
+.speaker-contact
+	@extend .float-right
+	:width 20%
+	:padding 0 4%
+	:padding $regular-spacing 0
+
+.speaker-contact__links li
+	:text-align left
+	:margin 0 0 1.5em 0
+
+.speaker-contact__links a
+	:font-size 1.2rem
+
+
+/* 
+ * attendees
+ */
+
+.attendees__grid
+	:margin $wide-spacing 0
+
+.attendees__avatar
+	@extend .float-left
+	:width 80px
+	:height 80px
+
+
+/*
+ * tweets
+ */
+
+.tweets
+	@extend .clearfix
+	:margin $wide-spacing * 2 0
+
+.tweets__tweet
+	@extend .clearfix
+	@extend .float-left
+	+border-radius(3)
+	:position relative
+	:background lighten($tertiary-color, 5%)
+	:width 33.33%
+//	:margin 0 0 1% 1%
+	
+.tweets__tweet:nth-child(3n)
+	
+
+// .tweets__tweet:nth-of-type(2n)
+// 	:background lighten($tertiary-color, 5%)
+
+.tweets__content
+	:padding $regular-spacing
+	:font-weight 100
+
+.tweets__user
+	@extend .clearfix
+	:background $tertiary-color
+	:color $secondary-color
+	+border-radius(3)
+
+.tweets__avatar
+	@extend .float-left
+	:margin 0 $regular-spacing 0 0
+	:max-width 100px
+
+
+.tweets__name
+	:display block
+	:padding $regular-spacing $regular-spacing 0 0
+	:font-size 1.1rem
+
+.tweets__handle
+	:display block
+	:padding $narrow-spacing $regular-spacing 0 0
+	:font-size 1.1rem
+
+// .tweets__text:before
+// 	:content ""
+// 	:border-color transparent $tertiary-color transparent transparent
+// 	:border-width 20px
+// 	:border-style solid
+// 	:position absolute
+// 	:top 50% - 13%
+// 	:left -35px
+// 	:width 0
+// 	:height 0
