@@ -51,3 +51,6 @@ gem 'mongoid', github: 'mongoid/mongoid'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use Thin app server:
+gem 'thin'
