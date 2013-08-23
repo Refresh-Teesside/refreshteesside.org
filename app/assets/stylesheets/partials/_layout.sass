@@ -6,29 +6,34 @@
  * Define all structural layout elements.
  */
 
+body
+	position: relative
+
 /* 
  * site header 
  */
 
 .site-header
-	:margin 0 0 $wide-spacing * 6 0
-	:position relative
+	position: fixed
+	top: 0
+	width: 100%
 
 /* 
  * site brand 
  */
 
 .site-brand
-	:position absolute
-	:top -150%
-	:left 50% - 8%
-	:background $tertiary-color
-	:font-family $primary-script
-	:font-size 3rem
-	:color $secondary-color
-	:text-transform none
+	position: absolute
+	top: -140px
+	left: 50%
+	margin: 0 0 0 -150px
+	font-size: 3rem
+	color: $secondary-color
+	text-transform: none
 	+border-radius(200)
-	:padding $wide-spacing * 4.5 $wide-spacing * 1.8 $wide-spacing * 1.5 $wide-spacing * 1.8
+
+.site-brand span
+	display: none
 
 /*
  * site navigation
@@ -43,22 +48,35 @@
 // </nav>
 
 .site-nav
-	:width 100%
-	:background $secondary-color
 	@extend .clearfix
+	width: 100%
+	background: $secondary-color
+	padding: 23px 0
+
+.site-nav__left
+	@extend .float-left
+
+.site-nav__right
+	@extend .float-right
 
 .site-nav__item
 	@extend .float-left
-	:margin $wide-spacing
+	margin: $narrow-spacing
 
 .site-nav__item a
-	:font-family $primary-sans-serif
-	:letter-spacing 1px
-	:font-size 1.2rem
-	:color $quarternary-color
-	:text-decoration none
-	:text-transform uppercase
+	font-family: $primary-sans-serif
+	letter-spacing: 1px
+	font-size: 1.2rem
+	color: $quarternary-color
+	text-decoration: none
+	text-transform: uppercase
 
+/*
+ * site hero
+ */
+
+.site-hero
+	margin: $wide-spacing * 10 0 0 0
 
 /*
  * grids
@@ -66,5 +84,11 @@
 
 .grid-wrapper
 	@extend .clearfix
-	:width 100%
-	:margin 0 auto
+	width: 100%
+	margin: 0 auto
+
+/*
+ * footer
+ */
+
+.site-footer
