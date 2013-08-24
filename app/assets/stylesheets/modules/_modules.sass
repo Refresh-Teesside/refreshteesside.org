@@ -10,27 +10,41 @@
   * wrapper
   */
 
-.wrapper
-	:margin $wide-spacing auto
-	:width 80%
-	:padding $wide-spacing * 2 $wide-spacing
-	+border-radius(3)
-	@extend .clearfix
+// .wrapper
+// 	:margin $wide-spacing auto
+// 	:width 80%
+// 	:padding $wide-spacing * 2 $wide-spacing
+// 	+border-radius(3)
+// 	@extend .clearfix
 
-.wrapper.wrapper--lead
-	:background $tertiary-color
+// .wrapper.wrapper--lead
+// 	:background $tertiary-color
 	
-.wrapper.wrapper--full-width
-	:width 100%
-	:padding $wide-spacing 0
+// .wrapper.wrapper--full-width
+// 	:width 100%
+// 	:padding $wide-spacing 0
 
-.wrapper.wrapper--temp
-	:background #333 
+// .wrapper.wrapper--temp
+// 	:background #333 
 
-.wrapper.wrapper--banner
-	@extend .wrapper
-	:padding 0
-	:width 64%
+// .wrapper.wrapper--banner
+// 	@extend .wrapper
+// 	:padding 0
+// 	:width 64%
+
+// v2
+
+.wrapper
+	width: 100%
+	margin: 0 auto
+	position: relative
+
+.wrapper-inner
+	width: 80%
+	margin: 0 auto
+	padding: $wide-spacing * 3 0
+
+// end v2
 
 
 /* 
@@ -49,6 +63,9 @@
 	:letter-spacing 2px
 	:color $quinary-color
 
+.event__title--center
+	text-align: center
+
 .event__date
 	:text-align center
 	:font-size 1.2rem
@@ -56,20 +73,90 @@
 
 // event intro
 
+// v2
+
 .event-intro
 	@extend .clearfix
-	:padding 0 0 $wide-spacing 0
+	background: $tertiary-color
+	padding: $wide-spacing
 
-.event-intro__summary
-	@extend .float-left
-	:width 70%
+.event-intro__nav
+	position: absolute
+	top: 180px
+	background-image: url(../assets/icons.png)
+	background-repeat: no-repeat
+	height: 65px
+	width: 38px
+	text-indent: -9999px
 
-.event-intro__schedule
-	@extend .float-right
-	:width 20%
+.event-intro__nav--prev
+	left: $wide-spacing
+	background-position: 0 0
 
-.event-intro__schedule__title
-	:margin $regular-spacing 0
+.event-intro__nav--next
+	right: $wide-spacing
+	background-position: -38px 0
+
+.event-intro__date
+	text-align: center
+
+.event-intro__register
+	text-align: center
+	width: 100%
+
+// end v2
+
+// event summary
+
+// v2
+
+.event-summary
+
+.event-summary__schedule
+	background: $tertiary-color
+
+.event-summary__schedule-list
+	list-style-type: none
+	padding: $regular-spacing
+	
+
+// end v2
+
+// speaker apply
+
+// v2
+
+.speaker-apply
+	background: $quinary-color
+	padding: $wide-spacing * 2
+
+.speaker-apply__content
+	margin: 0 auto
+	width: 65%
+
+.speaker-apply__content__text
+	background: $white
+	padding: $regular-spacing + 4px
+	margin: 0 $regular-spacing 0 0
+	font-size: 1.2rem
+	display: inline-block
+
+// end v2
+
+// .event-intro
+// 	@extend .clearfix
+// 	:padding 0 0 $wide-spacing 0
+
+// .event-intro__summary
+// 	@extend .float-left
+// 	:width 70%
+
+// .event-intro__schedule
+// 	@extend .float-right
+// 	:width 20%
+
+// .event-intro__schedule__title
+// 	:margin $regular-spacing 0
 
 /* 
  * speakers
@@ -142,61 +229,93 @@
 
 
 /*
- * tweets
+ * twitter feed
  */
 
-.tweets
-	@extend .clearfix
-	:margin $wide-spacing * 2 0
+.twitter-feed
+	background: $tertiary-color
 
-.tweets__tweet
+.twitter-feed__tweet-list
 	@extend .clearfix
-	@extend .float-left
+	padding: 0
+	margin: $wide-spacing * 2 0 0 0
+	position: relative
+	z-index: 0
+	width: 100%
+	-webkit-column-count: 3
+	column-count: $regular-spacing
+	-webkit-column-gap: 5px
+	column-gap: $regular-spacing
+	display: block
+
+.twitter-feed__tweet
+	@extend .clearfix
 	+border-radius(3)
-	:position relative
-	:background lighten($tertiary-color, 5%)
-	:width 33.33%
-//	:margin 0 0 1% 1%
-	
-.tweets__tweet:nth-child(3n)
-	
+	position: relative
+	background: lighten($tertiary-color, 5%)
+	width: 95%
+	margin: 0 0 $wide-spacing 0
+	display: inline-block
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .1)
+	-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .1)
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .1)
 
-// .tweets__tweet:nth-of-type(2n)
-// 	:background lighten($tertiary-color, 5%)
+.twitter-feed__tweet__content
+	padding: $regular-spacing
+	margin: 0
 
-.tweets__content
-	:padding $regular-spacing
-	:font-weight 100
-
-.tweets__user
+.twitter-feed__tweet__user
 	@extend .clearfix
-	:background $tertiary-color
-	:color $secondary-color
-	+border-radius(3)
+	background: $white
+	color: $secondary-color
+	+border-radius-all(0, 0, 3, 3)
 
-.tweets__avatar
+.twitter-feed__tweet__user__avatar
 	@extend .float-left
-	:margin 0 $regular-spacing 0 0
-	:max-width 100px
+	margin: 0 $regular-spacing 0 0
+	max-width: 65px
+
+.twitter-feed__tweet__user__avatar img
+	max-width: 65px
+	height: 100%
+
+.twitter-feed__tweet__user__name
+	display: block
+	padding: $narrow-spacing 0 0 0
+
+// location
+
+// v2
+
+.location
+	position: relative
+
+.location__map
+	height: 500px
+
+.location__contact-details
+	position: absolute
+	top: 0
+	right: 50px
+	background: $primary-color
+	height: 100%
+	max-width: 500px
+	padding: $wide-spacing
+
+.location__contact-details__address
+	font-style: normal
+
+.location__contact-details__address__item
+	display: block
+	margin: 0 0 $narrow-spacing 0
+	font-size: 1.1rem
+
+.location__contact-details__address__item--venue
+	font-size: 1.4rem
+
+.location__contact-details__address__item--twitter
+	margin: $wide-spacing 0 $narrow-spacing 0
 
 
-.tweets__name
-	:display block
-	:padding $regular-spacing $regular-spacing 0 0
-	:font-size 1.1rem
 
-.tweets__handle
-	:display block
-	:padding $narrow-spacing $regular-spacing 0 0
-	:font-size 1.1rem
-
-// .tweets__text:before
-// 	:content ""
-// 	:border-color transparent $tertiary-color transparent transparent
-// 	:border-width 20px
-// 	:border-style solid
-// 	:position absolute
-// 	:top 50% - 13%
-// 	:left -35px
-// 	:width 0
-// 	:height 0
+// end v2
