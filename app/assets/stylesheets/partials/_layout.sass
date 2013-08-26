@@ -54,15 +54,33 @@ body
 	background: $secondary-color
 	padding: $narrow-spacing 0
 
+.site-nav__left, .site-nav__right
+	width: 38%
+	padding: 0
+
 .site-nav__left
 	@extend .float-left
+	padding: 0 11% 0 0
 
 .site-nav__right
 	@extend .float-right
+	padding: 0 0 0 11%
+
+.site-nav__item-wrapper--left
+	@extend .float-right
+
+.site-nav__item-wrapper--right
+	@extend .float-left
 
 .site-nav__item
 	@extend .float-left
-	margin: $narrow-spacing
+	margin: $narrow-spacing $wide-spacing * 1.5 $narrow-spacing $narrow-spacing
+
+.site-nav__item:nth-of-type(2)
+	margin: $narrow-spacing 0 $narrow-spacing $narrow-spacing
+
+.site-nav__item:nth-of-type(1)
+	margin: $narrow-spacing $wide-spacing * 1.5 $narrow-spacing 0
 
 .site-nav__item a
 	font-family: $primary-sans-serif
