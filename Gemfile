@@ -36,6 +36,9 @@ gem 'therubyracer'
 gem 'haml'
 
 gem 'mongoid', github: 'mongoid/mongoid'
+gem 'eventbrite-client'
+gem 'rails_admin'
+
 
 # Use Compass
 # gem 'compass-rails'
@@ -54,3 +57,6 @@ gem 'mongoid', github: 'mongoid/mongoid'
 
 # Use Thin app server:
 gem 'thin'
+
+
+gem "devise"
