@@ -11,9 +11,9 @@
  */
 
 =column-count($val)
-	-webkit-column-count: $val + px
-	-moz-column-count: $val + px
-	column-count: $val + px
+	-webkit-column-count: $val
+	-moz-column-count: $val
+	column-count: $val
 
 /*
  * column gap
@@ -46,3 +46,14 @@
 	-webkit-box-shadow: $h + px $v +px $blur + px $spread + px $color
 	-moz-box-shadow: $h + px $v +px $blur + px $spread + px $color
 	box-shadow: $h + px $v +px $blur + px $spread + px $color
+
+/*
+ * transtition
+ */
+
+=transition($prop, $dur, $ease)
+	-webkit-transition: $prop $dur $ease
+	-moz-transition: $prop $dur $ease
+	-ms-transition: $prop $dur $ease
+	-o-transition: $prop $dur $ease
+	transition: $prop $dur $ease
