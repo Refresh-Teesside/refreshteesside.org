@@ -7,6 +7,24 @@
  */
 
 /*
+ * column count
+ */
+
+=column-count($val)
+	-webkit-column-count: $val + px
+	-moz-column-count: $val + px
+	column-count: $val + px
+
+/*
+ * column gap
+ */
+
+=column-gap($val)
+	-webkit-column-gap: $val + px
+	-moz-column-gap: $val + px
+	column-gap: $val + px
+
+/*
  * border radius
  */
 
@@ -19,3 +37,12 @@
 	-webkit-border-radius: $tl + px $tr + px $br + px $bl + px
 	-moz-border-radius: $tl + px $tr + px $br + px $bl + px
 	border-radius: $tl + px $tr + px $br + px $bl + px
+
+/*
+ * box-shadow
+ */
+
+=box-shadow($h, $v, $blur, $spread, $color)
+	-webkit-box-shadow: $h + px $v +px $blur + px $spread + px $color
+	-moz-box-shadow: $h + px $v +px $blur + px $spread + px $color
+	box-shadow: $h + px $v +px $blur + px $spread + px $color
