@@ -12,4 +12,7 @@ class Event
 
   embeds_one :location 
   embeds_many :speakers
+
+  accepts_nested_attributes_for :location, :speakers
+
 end

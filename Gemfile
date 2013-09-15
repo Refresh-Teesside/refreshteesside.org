@@ -36,6 +36,7 @@ gem 'therubyracer'
 gem 'haml'
 
 gem 'mongoid', github: 'mongoid/mongoid'
+gem 'mongoid_slug'
 gem 'eventbrite-client'
 gem 'rails_admin'
 
