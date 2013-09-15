@@ -11,7 +11,7 @@
 	color: $tertiary-color
 	background: $secondary-color
 	font-family: $primary-sans-serif
-	font-weight: 300
+	font-weight: 500
 	text-transform: uppercase
 	padding: $regular-spacing $regular-spacing * 2
 	text-decoration: none
@@ -20,5 +20,10 @@
 	display: inline-block
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, .7)
 	+border-radius(3)
+	+transition(background, .3s, ease)
+
+.btn:hover
+	text-decoration: none
+	background: darken($secondary-color, 15%)
 
 .btn--center

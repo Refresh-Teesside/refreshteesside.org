@@ -1,0 +1,59 @@
+/*
+ * _mixins.sass
+ * Author: Timothy Gale
+ * Date: 19/07/13
+ *
+ * Define global mixins used throughout the project.
+ */
+
+/*
+ * column count
+ */
+
+=column-count($val)
+	-webkit-column-count: $val
+	-moz-column-count: $val
+	column-count: $val
+
+/*
+ * column gap
+ */
+
+=column-gap($val)
+	-webkit-column-gap: $val + px
+	-moz-column-gap: $val + px
+	column-gap: $val + px
+
+/*
+ * border radius
+ */
+
+=border-radius($radius)
+	:-moz-border-radius $radius + px
+	:-webkit-border-radius $radius + px
+	:border-radius $radius + px
+
+=border-radius-all($tl, $tr, $br, $bl)
+	-webkit-border-radius: $tl + px $tr + px $br + px $bl + px
+	-moz-border-radius: $tl + px $tr + px $br + px $bl + px
+	border-radius: $tl + px $tr + px $br + px $bl + px
+
+/*
+ * box-shadow
+ */
+
+=box-shadow($h, $v, $blur, $spread, $color)
+	-webkit-box-shadow: $h + px $v +px $blur + px $spread + px $color
+	-moz-box-shadow: $h + px $v +px $blur + px $spread + px $color
+	box-shadow: $h + px $v +px $blur + px $spread + px $color
+
+/*
+ * transtition
+ */
+
+=transition($prop, $dur, $ease)
+	-webkit-transition: $prop $dur $ease
+	-moz-transition: $prop $dur $ease
+	-ms-transition: $prop $dur $ease
+	-o-transition: $prop $dur $ease
+	transition: $prop $dur $ease
