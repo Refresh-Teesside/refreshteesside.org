@@ -6,6 +6,7 @@ class Location
   field :title
   field :address
   field :postcode
+  field :phone
   field :twitter
 
   embedded_in :event

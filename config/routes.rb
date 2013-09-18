@@ -8,6 +8,9 @@ Refresh::Application.routes.draw do
   # root 'welcome#index'
   root 'events#index'
 
+  resources :abouts, :only => ["index"]
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
