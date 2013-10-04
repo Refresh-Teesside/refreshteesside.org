@@ -9,6 +9,7 @@ Refresh::Application.routes.draw do
   root 'events#index'
 
   resources :abouts, :only => ["index"]
+  resources :messages, :only => ["new", "create"]
 
 
   # Example of regular route:
