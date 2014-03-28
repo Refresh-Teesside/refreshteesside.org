@@ -3,14 +3,14 @@
 
 	<a href="#" class="event-intro__nav event-intro__nav--prev">Previous</a>
 	<a href="#" class="event-intro__nav event-intro__nav--next">Next</a>
-	
+
 	<div class="wrapper-inner">
-		
+
 		<!-- event block -->
 		<div class="event-intro">
 
-			<h1 class="event__title event__title--center"><%= @events.first.title %></h1>
-				<h2 class="event-intro__date"><%= @events.first.date.strftime('%A %e %B %Y') %></h2>
+			<h1 class="event__title event__title--center">hello</h1>
+				<h2 class="event-intro__date"></h2>
 					<div class="event-intro__register">
 						<a href="#" class="btn btn--center">Register Free Now</a>
 					</div>
@@ -18,18 +18,18 @@
 					<!-- event speakers -->
 					<div class="event-intro__speakers">
 						<ul class="event-intro__speakers__list">
-							<% @events.first.speakers.each do |s| %>
+
 								<li class="event-intro__speakers__item">
 									<a href="#">
 										<img src="http://placehold.it/200x200" alt="Speaker Image" class="event-intro__speakers__photo">
-										<h2 class="event-inotr__speakers__name"><%= s.name %></h2>
+										<h2 class="event-inotr__speakers__name"></h2>
 									</a>
 								</li>
-							<% end %>
+
 						</ul>
 					</div>
 					<!-- /event speakers -->
-		
+
 		</div>
 		<!-- /event block -->
 
@@ -41,7 +41,7 @@
 <section class="event-summary wrapper">
 	<div class="wrapper-inner">
 		<h1 class="event__title">Event Summary</h1>
-			
+
 			<div class="grid-wrapper">
 				<div class="grid grid--three">
 					<p>Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis.</p>
@@ -53,7 +53,7 @@
 							<li>Registration</li>
 							<li>Speakers</li>
 							<li>Food</li>
-							<li>Networking</li>					
+							<li>Networking</li>
 							<li>Close</li>
 						</ol>
 				</div>
@@ -345,7 +345,7 @@
 						<h1 class="twitter-feed__tweet__user__name">Sample User</h1>
 							<span class="twitter-feed__tweet__user__handle">@sampleuser</span>
 					</div>
-				</li>	
+				</li>
 			</ul>
 	</div>
 </section>
@@ -384,6 +384,6 @@
 
 <!-- footer block -->
 <footer class="site-footer">
-	
+
 </footer>
 <!-- /footer block -->
