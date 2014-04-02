@@ -1,0 +1,64 @@
+// ==================
+// NAVIGATION
+// ==================
+
+// ------------------
+// Nav Base
+// ------------------
+
+%nav {
+	@extend %clearfix;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+// ------------------
+// Nav Alpha
+// ------------------
+
+.nav--alpha {
+	@extend %nav;
+
+	@include breakpoint(small) {
+		float: none;
+	}
+
+}
+
+	.nav--alpha__item {
+		@include calc-rem("font-size", 16px);
+		display: inline-block;
+		float: left;
+		margin-right: calc-em($spacing-alpha, $font-size-alpha);
+		color: $color-delta;
+
+		@include breakpoint(small) {			
+			display: block;
+			width: 100%;
+			float: none;
+		}
+
+	}
+
+		.nav--alpha__item a {
+			color: $color-delta;
+			text-decoration: none;
+			text-align: center;
+			@include calc-rem("font-size", 16px);
+
+			@include breakpoint(small) {
+				display: block;
+				padding: calc-em(16, 16);
+				background: $color-bravo
+			}
+
+		}
+
+// ------------------
+// Nav Bravo
+// ------------------
+
+.nav--bravo {
+	@extend %nav;
+}

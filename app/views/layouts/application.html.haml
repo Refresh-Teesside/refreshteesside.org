@@ -20,14 +20,4 @@
     /[if IE]
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   %body
-    %header.site-header
-      / brand block
-      %h1.site-brand
-        %span Refresh Teesside
-        = render 'layouts/svg_logo'
-      = render 'layouts/main_nav'
     = yield
-    / typekit
-    %script{:src => "//use.typekit.net/aht0qse.js", :type => "text/javascript"}
-    :javascript
-      try{Typekit.load();}catch(e){}

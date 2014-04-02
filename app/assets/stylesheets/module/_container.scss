@@ -1,0 +1,98 @@
+// ==================
+// CONTAINER
+// ==================
+
+// UI Container Base
+
+%ui-container { @extend %clearfix; }
+.ui-container { @extend %clearfix; }
+
+// UI Container Alpha
+// Sample use: global content
+
+.ui-container--alpha {
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+	z-index: 3;
+}
+
+// UI Container Bravo
+// Sample use: top content
+
+.ui-container--bravo {
+	position: relative;
+	// background: $color-alpha;
+	padding-top: calc-em(40, 20);
+	padding-bottom: calc-em(100, 20);
+}
+
+// UI Container Charlie
+// Sample use: clear floats
+
+.ui-container--charlie {
+	@extend %ui-container;
+	padding-bottom: calc-em(100, 20);
+}
+
+// UI Container Delta
+// Sample use: large verical padding
+
+.ui-container--delta {
+	@extend %ui-container;
+	padding: calc-em(100, 20) 0;
+}
+
+// UI Container Echo
+// Sample use: main content
+
+.ui-container--echo {
+	@extend %ui-container;
+	background: $color-delta;
+
+	.alt-container {
+		background: $color-fox;
+	}
+
+}
+
+// UI Container Photo
+// Sample use: about
+
+%photo-container {
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		display: block;
+		background: darken(rgba(71, 62, 71, .85), 15%);
+	}
+
+}
+
+.photo-container--alpha {
+	@extend %photo-container;
+	background: url(refresh-photo-1.jpg) no-repeat 0 20%;
+	background-size: cover;
+	position: relative;
+}
+
+.photo-container--bravo {
+	// @extend .photo-container--alpha;
+	// background: url(../images/refresh-photo-2.jpg) no-repeat 0 0;
+	background: $color-alpha;
+}
+
+// UI Container Tweet
+// Sample use: latest tweet
+
+.tweet-container {
+	background: $color-delta;
+	padding: calc-em(20, 18);
+	border-radius: 3px;
+}

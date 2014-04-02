@@ -1,0 +1,68 @@
+// ==================
+// ICONS
+// ==================
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'refresh-teesside';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1.3;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// ------------------
+// Icon Base
+// ------------------
+
+%icon {
+	display: block;
+}
+
+// ------------------
+// Icon Chevron Down
+// ------------------
+
+.icon--chevron-down:before {
+	@extend %icon;
+	content: "\e600";
+	margin-top: calc-em(40, 20);
+}
+
+// ------------------
+// Icon Chevron Right
+// ------------------
+
+.icon--chevron-right:before {
+	@extend %icon;
+	content: "\e601";
+}
+
+// ------------------
+// Icon Ellipsis
+// ------------------
+
+.icon--ellipsis:before {
+	@extend %icon;
+	content: "\e602";
+}
+
+// ------------------
+// Icon Twitter
+// ------------------
+
+.icon--twitter:before {
+	@extend %icon;
+	content: "\e603";
+}
+
+// ------------------
+// Icon Light
+// ------------------
+
+.icon--light {
+	color: $color-delta;
+}

@@ -1,0 +1,56 @@
+// ==================
+// BUTTON
+// ==================
+
+// ------------------
+// UI Button
+// ------------------
+
+// UI Button Base
+
+%ui-button {
+	display: inline-block;
+}
+
+// UI Button Alpha
+// Sample use: call to action
+
+.ui-button--alpha {
+	@extend %ui-button;
+	background: $color-bravo;
+	padding: calc-em(20, 18) calc-em(30, 18);
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: $color-delta;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-radius: 50px;
+	-webkit-transition: background .4s ease;
+	-moz-transition: background .4s ease;
+	transition: background .4s ease;
+
+	&:hover {
+		background: darken($color-bravo, 5%);
+		border-bottom: none;
+	}
+
+}
+
+// UI Button Bravo
+// Sample use: view more attendees
+
+.ui-button--bravo {
+	@extend %ui-button;
+	background: $color-bravo;
+	padding: calc-em(16, 18) calc-em(18, 18);
+	border-radius: 100px;
+	color: $color-delta;
+	-webkit-transition: background .4s ease;
+	-moz-transition: background .4s ease;
+	transition: background .4s ease;
+
+	&:hover {
+		@extend .ui-button--alpha:hover;
+	}
+
+}

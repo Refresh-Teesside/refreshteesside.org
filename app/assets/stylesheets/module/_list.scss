@@ -1,0 +1,109 @@
+// ==================
+// LIST
+// ==================
+
+// ------------------
+// UI List
+// ------------------
+
+// UI List Base
+// Extend this placeholder for all list variants
+
+%ui-list { display: inline-block; }
+.ui-list { display: inline-block; }
+
+// UI List Alpha
+// Sample use: main navigation
+
+.ui-list--alpha {
+  @extend %ui-list;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+  .ui-list--alpha__item {
+    float: left;
+    margin-right: calc-em(40, 18);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+
+    .ui-list--alpha__item a {
+      @include calc-rem("font-size", 16px);
+      color: $color-delta;
+      padding-bottom: calc-em(6, 18);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 2px solid transparent;
+      -webkit-transition: border-color .4s ease;
+      -moz-transition: border-color .4s ease;
+      transition: border-color .4s ease;
+
+      &:hover {
+        border-bottom: 2px solid rgba(255, 255, 255, .3);
+      }
+
+    }
+
+// UI List Bravo
+// Sample use: speaker list
+
+.ui-list--bravo {
+  @extend .ui-list--alpha;
+  display: inline;
+}
+
+
+    .ui-list__item__image {
+      max-width: 140px;
+      margin: 0 auto;
+
+      img {
+        border-radius: 200px;
+        max-height: 140px;
+      }
+
+    }
+
+// UI List Charlie
+// Sample use: schedule
+
+.ui-list--charlie {
+  @extend %ui-list;
+  list-style-type: none;
+  position: relative;
+  padding: 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 1px;
+    height: 100%;
+    background: rgba(0, 0, 0, .2);
+  }
+
+}
+
+  .ui-list--charlie__item {
+    display: block;
+    padding-bottom: calc-em(60, 20);
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+  }
+
+    .ui-list--charlie__title {}
+
+    .ui-list--charlie__meta {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-right: calc-em(120, 20);
+    }

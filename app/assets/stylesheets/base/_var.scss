@@ -1,0 +1,57 @@
+// ==================
+// VARIABLES
+// ==================
+
+// ------------------
+// Colour
+// ------------------
+
+// Base Palette
+
+$color-brown: 	     #473E47;
+$color-green: 	     #ABC6C6;
+$color-grey-light:   #F5F5F5;
+$color-grey-lighter: #FAF9F7;
+$color-grey-mid:     #E5E5E5;
+$color-white: 	     #FFFFFF;
+
+// Theme
+
+$color-alpha: 	$color-brown;
+$color-bravo: 	$color-green;
+$color-charlie: $color-grey-light;
+$color-delta: 	$color-white;
+$color-echo:    $color-grey-mid;
+$color-fox:     $color-grey-lighter;
+
+// ------------------
+// Font
+// ------------------
+
+// Font Family
+
+$font-family-alpha: 	"Proxima Nova", "Helvetica Neue", Helvetica, sans-serif;
+$font-family-bravo: 	"Bello", sans-serif;
+$font-family-charlie: "refresh-teesside";
+$font-family-delta:   "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+
+// Font sizing
+
+$font-size-alpha: 16px;
+
+// ------------------
+// Spacing
+// ------------------
+
+$spacing-alpha: 	20px;
+$spacing-bravo: 	30px;
+$spacing-charlie: 40px;
+
+// ------------------
+// Breakpoints
+// ------------------
+
+$break-alpha: 	400px;
+$break-bravo: 	700px;
+$break-charlie: 900px;
+$break-delta: 	1200px;

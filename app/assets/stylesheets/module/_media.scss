@@ -1,0 +1,43 @@
+// ==================
+// MEDIA
+// ==================
+
+// ------------------
+// Image Grid
+// ------------------
+
+.image-grid {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	max-height: 50px;
+	overflow: hidden;
+}
+
+	.image-grid__item {
+		position: relative;
+		float: left;
+		max-width: 50px;
+		margin-right: calc-em(20, 20);
+
+		@include breakpoint(small) {
+			width: 50%;
+		}
+
+		img {
+			width: 100%;
+			max-height: 50px;
+			border-radius: 100px;
+		}
+
+	}
+
+		.image-grid__caption {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: rgba(0, 0, 0, .5);
+			width: 100%;
+			color: $color-delta;
+			padding-left: calc-em(20, 16);
+		}

@@ -1,0 +1,192 @@
+// ==================
+// HELPER
+// ==================
+
+// ------------------
+// Clearfix
+// ------------------
+
+%clearfix:before,
+%clearfix:after {
+    content: " ";
+    display: table;
+}
+
+%clearfix:after {
+    clear: both;
+}
+
+%clearfix {
+    *zoom: 1;
+}
+
+// ------------------
+// Floats
+// ------------------
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+// ------------------
+// Alignment
+// ------------------
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// Vertical alignment
+
+.align-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-flex__item {
+  max-width: 70%;
+}
+
+// ------------------
+// Spacing
+// ------------------
+
+.spacing-alpha {
+  padding-bottom: 20px !important;
+}
+
+.spacing-bravo {
+  padding-bottom: 40px !important;
+}
+
+.spacing-charlie {
+  padding-bottom: 60px !important;
+}
+
+.spacing-delta {
+  padding: 60px 0 !important;
+}
+
+.spacing-echo {
+  margin-right: 20px !important;
+}
+
+.spacing-right {
+  padding-right: 20px !important;
+}
+
+// ------------------
+// Typography
+// ------------------
+
+
+.text-light {
+	color: $color-delta !important;
+}
+
+.text-mid {
+  color: darken($color-echo, 20%) !important;
+}
+
+.text-overlay {
+    position: relative;
+    z-index: 2;
+    color: $color-delta;
+}
+
+// ------------------
+// Borders
+// ------------------
+
+.border-alpha {
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.border-bravo {
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.border-charlie {
+  border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+.heading-underline {
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 48.6%;
+    height: 1px;
+    width: 3%;
+    // background: rgba(0, 0, 0, .3);
+    background: $color-bravo;
+  }
+
+}
+
+// ------------------
+// Calculate rem value
+// ------------------
+
+@mixin calc-rem($property, $value, $context: $font-size-alpha) {
+    #{$property}: $value;
+    #{$property}: cr($value, $context);
+}
+
+// ------------------
+// Calculate em value
+// ------------------
+
+// $context is equal to the font size of parent element
+
+@function calc-em($target, $context) {
+	@return $target / $context * 1em;
+}
+
+// ------------------
+// Calculate percentage value
+// ------------------
+
+@function calc-percent($target, $context) {
+	@return $target / $context * 100%;
+}
+
+// ------------------
+// Media Queries
+// ------------------
+
+@mixin breakpoint($type, $fallback: false, $parent: true) {
+
+	@if $type == small {
+		@media(max-width: $break-alpha) {
+			@content;
+		}
+	}
+
+	@if $type == medium {
+		@media(min-width: $break-bravo) {
+			@content;
+		}
+	}
+
+	@if $type == large {
+		@media(min-width: $break-charlie) {
+			@content;
+		}
+	}
+
+}
