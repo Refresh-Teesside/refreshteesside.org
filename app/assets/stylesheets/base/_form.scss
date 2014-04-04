@@ -1,0 +1,67 @@
+// ==================
+// FORM
+// ==================
+
+// ------------------
+// UI Form
+// ------------------
+
+.ui-form {
+  @extend .text-left;
+
+  fieldset {
+    border: none;
+  }
+
+}
+
+  .ui-form__item {
+
+    // Label
+
+    label {
+      padding-right: calc-em(20, 18);
+    }
+
+    // Input Text
+
+    input[type="text"],
+    textarea {
+      padding: calc-em(12, 16);
+      @include calc-rem("font-size", 16px);
+      border: 1px solid rgba(0, 0, 0, .3);
+      border-radius: 2px;
+    }
+
+    // Input Submit
+
+    input[type="submit"] {
+      border: none;
+      cursor: pointer;
+    }
+
+  }
+
+// ------------------
+// Input Select
+// ------------------
+
+%select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-indent: 0.01px;
+  text-overflow: "";
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select--alpha {
+  @extend %select;
+  color: $color-alpha;
+  padding: calc-em(12, 16);
+  @include calc-rem("font-size", 16px);
+  border: 1px solid rgba(0, 0, 0, .3);
+}
