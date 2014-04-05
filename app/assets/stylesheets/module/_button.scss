@@ -17,7 +17,7 @@
 
 .ui-button--alpha {
 	@extend %ui-button;
-	background: $color-bravo;
+	background: darken($color-bravo, 10%);
 	padding: calc-em(20, 18) calc-em(30, 18);
 	font-size: 1.2rem;
 	font-weight: 600;
@@ -30,7 +30,7 @@
 	transition: background .4s ease;
 
 	&:hover {
-		background: darken($color-bravo, 5%);
+		background: darken($color-bravo, 20%);
 		border-bottom: none;
 	}
 

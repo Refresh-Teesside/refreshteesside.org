@@ -70,6 +70,11 @@
   display: inline;
 }
 
+  .ui-list--bravo__item {
+    float: none;
+    display: inline-block;
+  }
+
 
     .ui-list__item__image {
       max-width: 140px;
@@ -120,3 +125,21 @@
       letter-spacing: 1px;
       margin-right: calc-em(120, 20);
     }
+
+// UI List Delta
+// Sample use: Social links
+
+.ui-list--delta {
+  @extend .ui-list--bravo;
+
+    .ui-list--delta__item {
+      @extend .ui-list--bravo__item;
+      margin-right: calc-em(40, 20);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+
+}

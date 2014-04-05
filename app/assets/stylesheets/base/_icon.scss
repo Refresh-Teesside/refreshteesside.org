@@ -60,6 +60,24 @@
 }
 
 // ------------------
+// Icon Google
+// ------------------
+
+.icon--google:before {
+	@extend %icon;
+	content: "\e605";
+}
+
+// ------------------
+// Icon Facebook
+// ------------------
+
+.icon--facebook:before {
+	@extend %icon;
+	content: "\e606";
+}
+
+// ------------------
 // Icon Arrow Down
 // ------------------
 
@@ -74,4 +92,13 @@
 
 .icon--light {
 	color: $color-delta;
+}
+
+
+// ------------------
+// Icon Large
+// ------------------
+
+.icon--large {
+	@include calc-rem("font-size", 45px);
 }

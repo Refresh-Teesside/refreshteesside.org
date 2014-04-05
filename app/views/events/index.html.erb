@@ -101,7 +101,11 @@
             <div class="grid-one-half--break ui-container text-left align-flex--center align-flex__item--break">
 
                 <div class="left spacing-right spacing-echo border-charlie align-flex__item">
-                  <h3 class="heading--five"><i class="icon--twitter"></i></h3>
+                  <h3 class="heading--five">
+                    <a href="http://twitter.com/refreshteesside">
+                      <i class="icon--twitter"></i>
+                    </a>
+                  </h3>
                     <span class="text-mid text-meta">Latest</span>
                 </div>
 
@@ -187,8 +191,8 @@
         </div>
         <!-- /schedule -->
 
-        <!-- sponsor -->
-        <div class="ui-container--delta photo-container--alpha" data-ui-component="sponsor-container">
+        <!-- about -->
+        <div class="ui-container--delta photo-container--alpha" data-ui-component="sponsor-about">
 
           <div class="text-overlay">
 
@@ -205,7 +209,7 @@
           </div>
 
         </div>
-        <!-- /sponsor -->
+        <!-- /about -->
 
         <!-- sponsor -->
         <div class="ui-container--delta alt-container" data-ui-component="sponsor-container">
@@ -216,12 +220,12 @@
 
           <div class="ui-container--alpha">
             <ul class="ui-list--bravo" data-ui-component="speaker-list">
-              <li class="ui-list__item grid-one-quarter left">
+              <li class="ui-list--bravo__item grid-one-quarter left">
                 <div class="ui-list__item__image spacing-bravo">
                   <img src="http://placehold.it/150x150" alt="sponsor" />
                 </div>
               </li>
-              <li class="ui-list__item grid-one-quarter left">
+              <li class="ui-list--bravo__item grid-one-quarter left">
                 <div class="ui-list__item__image spacing-bravo">
                   <img src="http://placehold.it/150x150" alt="sponsor" />
                 </div>
@@ -233,7 +237,7 @@
         <!-- /sponsor -->
 
         <!-- contact -->
-        <div class="ui-container--delta" data-ui-component="contact-container">
+        <div class="ui-container--delta--alt ui-container--delta--alt" data-ui-component="contact-container">
 
           <div class="ui-container--charlie">
             <h1 class="heading--four spacing-bravo heading-underline">Get in Touch</h1>
@@ -241,24 +245,26 @@
 
           <div class="ui-container--alpha">
 
+            <p class="copy--alpha spacing-bravo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
             <form action="#" method="post" class="ui-form spacing-charlie" data-ui-component="contact-form">
               <fieldset>
-                <div class="ui-form__item grid-one-whole spacing-alpha align-flex">
-                  <label for="name" class="label--bravo grid-two-tenths align-flex__item--whole">Name</label>
-                    <div class="ui-form__input grid-eight-tenths align-flex__item--whole">
+                <div class="ui-form__item grid-one-whole spacing-alpha">
+                  <label for="name" class="label--alpha grid-one-whole">Name</label>
+                    <div class="ui-form__input grid-one-whole">
                       <input type="text" name="name" placeholder="Please enter your name" class="grid-one-whole" />
                     </div>
                 </div>
-                <div class="ui-form__item grid-one-whole spacing-alpha align-flex">
-                  <label for="name" class="label--bravo grid-two-tenths align-flex__item--whole">Email</label>
-                    <div class="ui-form__input grid-eight-tenths align-flex__item--whole">
+                <div class="ui-form__item grid-one-whole spacing-alpha">
+                  <label for="name" class="label--alpha grid-one-whole">Email</label>
+                    <div class="ui-form__input grid-one-whole">
                       <input type="text" name="email" placeholder="Please enter your email" class="grid-one-whole" />
                     </div>
                 </div>
                 <div class="ui-form__item grid-one-whole spacing-alpha">
                   <label for="name" class="label--alpha grid-one-whole">Subject</label>
                     <div class="ui-form__input grid-one-whole">
-                      <select id="enquiry" name="enquiry" class="select--alpha grid-three-tenths">
+                      <select id="enquiry" name="enquiry" class="select--alpha grid-three-tenths--break">
                         <option value="general-enquiry">Enquiry type...</option>
                         <option value="general-enquiry">General Enquiry</option>
                         <option value="talk-submit">Submit Talk Idea</option>
@@ -271,7 +277,7 @@
                       <textarea name="message" placeholder="Please enter your message" rows="8" class="grid-one-whole"></textarea>
                     </div>
                 </div>
-                <div class="ui-form__item grid-one-half">
+                <div class="ui-form__item grid-one-half--break">
                   <input type="submit" name="submit" value="Submit" class="grid-one-half ui-button--alpha" />
                 </div>
               </fieldset>
@@ -279,16 +285,32 @@
 
           </div>
 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2312.5733933886313!2d-1.235165999999969!3d54.576269999999866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487eed122374caf7%3A0x24872a99099d158!2sMink+Tattoo+Coffee+Bar!5e0!3m2!1sen!2suk!4v1396641446479" width="100%" height="450" frameborder="0" style="border:0"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2312.5733933886313!2d-1.235165999999969!3d54.576269999999866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487eed122374caf7%3A0x24872a99099d158!2sMink+Tattoo+Coffee+Bar!5e0!3m2!1sen!2suk!4v1396641446479" width="100%" height="450" frameborder="0" style="border:0;display:block;"></iframe>
+
+          <!-- footer -->
+          <div class="ui-container--delta alt-container">
+            <ul class="ui-list--delta">
+              <li class="ui-list--delta__item">
+                <a href="http://www.twitter.com/refreshteesside" title="Twitter">
+                  <i class="icon--twitter icon--large"></i>
+                </a>
+              </li>
+              <li class="ui-list--delta__item">
+                <a href="http://www.facebook.com/refreshteesside" title="Facebook">
+                  <i class="icon--facebook icon--large"></i>
+                </a>
+              </li>
+              <li class="ui-list--delta__item">
+                <a href="http://groups.google.com/forum/#!forum/refresh-teesside" title="Google Groups">
+                  <i class="icon--google icon--large"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- /footer -->
 
         </div>
         <!-- /contact -->
-
-        <!-- footer -->
-        <div class="ui-cotainer--delta alt-container">
-          footer
-        </div>
-        <!-- /footer -->
 
       </div>
       <!-- /section -->
