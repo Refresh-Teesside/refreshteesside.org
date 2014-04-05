@@ -60,6 +60,15 @@
 }
 
 // ------------------
+// Icon Arrow Down
+// ------------------
+
+.icon--arrow-down:before {
+	@extend %icon;
+	content: "\e604";
+}
+
+// ------------------
 // Icon Light
 // ------------------
 

@@ -1,0 +1,56 @@
+// ==================
+// FUNCTIONS
+// ==================
+
+// ------------------
+// Calculate rem value
+// ------------------
+
+@mixin calc-rem($property, $value, $context: $font-size-alpha) {
+    #{$property}: $value;
+    #{$property}: cr($value, $context);
+}
+
+// ------------------
+// Calculate em value
+// ------------------
+
+// $context is equal to the font size of parent element
+
+@function calc-em($target, $context) {
+  @return $target / $context * 1em;
+}
+
+// ------------------
+// Calculate percentage value
+// ------------------
+
+@function calc-percent($target, $context) {
+  @return $target / $context * 100%;
+}
+
+// ------------------
+// Media Queries
+// ------------------
+
+@mixin breakpoint($type, $fallback: false, $parent: true) {
+
+  @if $type == small {
+    @media(max-width: $break-alpha) {
+      @content;
+    }
+  }
+
+  @if $type == medium {
+    @media(max-width: $break-bravo) {
+      @content;
+    }
+  }
+
+  @if $type == large {
+    @media(max-width: $break-charlie) {
+      @content;
+    }
+  }
+
+}

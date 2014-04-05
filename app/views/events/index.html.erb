@@ -8,9 +8,9 @@
       <div class="ui-container--bravo" data-ui-component="view-top-container">
 
         <!-- header -->
-        <div class="ui-container spacing-alpha border-alpha align-flex" data-ui-component="view-header-container">
+        <div class="ui-container spacing-alpha border-alpha align-flex--break" data-ui-component="view-header-container">
 
-          <div class="grid-one-half left align-flex__item">
+          <div class="grid-three-tenths--break left align-flex__item--break">
 
             <!-- brand -->
             <h1 class="heading--one">
@@ -20,7 +20,7 @@
 
           </div>
 
-          <div class="grid-one-half right text-right align-flex__item">
+          <div class="grid-seven-tenths--break right text-right align-flex__item--break">
 
             <!-- main nav -->
             <ul class="ui-list--alpha" data-ui-component="main-nav-list">
@@ -68,9 +68,9 @@
         <!-- stats -->
         <div class="ui-container--delta spacing-delta alt-container grid-one-whole" data-ui-component="statistics-container">
 
-          <div class="ui-container--alpha align-flex" data-ui-component="data-container">
+          <div class="ui-container--alpha align-flex--break" data-ui-component="data-container">
 
-            <div class="grid-one-half left align-flex align-flex__item">
+            <div class="grid-one-half--break left align-flex--center align-flex__item--break">
               <div class="text-left left spacing-right spacing-echo border-charlie align-flex__item">
                 <h3 class="heading--five text-center spacing-alpha">73</h3>
                   <span class="text-mid">Attendees</span>
@@ -98,7 +98,7 @@
                 </li>
               </ul>
             </div>
-            <div class="grid-one-half right ui-container text-left align-flex align-flex__item">
+            <div class="grid-one-half--break ui-container text-left align-flex--center align-flex__item--break">
 
                 <div class="left spacing-right spacing-echo border-charlie align-flex__item">
                   <h3 class="heading--five"><i class="icon--twitter"></i></h3>
@@ -241,37 +241,38 @@
 
           <div class="ui-container--alpha">
 
-            <form action="#" method="post" class="ui-form" data-ui-component="contact-form">
+            <form action="#" method="post" class="ui-form spacing-charlie" data-ui-component="contact-form">
               <fieldset>
-                <div class="ui-form__item grid-one-half align-flex spacing-alpha">
-                  <label for="name" class="grid-four-tenths align-flex__item text-right">Name</label>
-                    <div class="ui-form__input grid-one-half align-flex__item">
+                <div class="ui-form__item grid-one-whole spacing-alpha align-flex">
+                  <label for="name" class="label--bravo grid-two-tenths align-flex__item--whole">Name</label>
+                    <div class="ui-form__input grid-eight-tenths align-flex__item--whole">
                       <input type="text" name="name" placeholder="Please enter your name" class="grid-one-whole" />
                     </div>
                 </div>
-                <div class="ui-form__item grid-one-half align-flex spacing-alpha">
-                  <label for="name" class="grid-four-tenths align-flex__item text-right">Email</label>
-                    <div class="ui-form__input grid-one-half align-flex__item">
+                <div class="ui-form__item grid-one-whole spacing-alpha align-flex">
+                  <label for="name" class="label--bravo grid-two-tenths align-flex__item--whole">Email</label>
+                    <div class="ui-form__input grid-eight-tenths align-flex__item--whole">
                       <input type="text" name="email" placeholder="Please enter your email" class="grid-one-whole" />
                     </div>
                 </div>
-                <div class="ui-form__item grid-one-half align-flex spacing-alpha">
-                  <label for="name" class="grid-four-tenths align-flex__item text-right">Reason for contact</label>
-                    <div class="ui-form__input grid-one-half align-flex__item">
-                      <select id="enquiry" name="enquiry" class="grid-one-half select--alpha">
+                <div class="ui-form__item grid-one-whole spacing-alpha">
+                  <label for="name" class="label--alpha grid-one-whole">Subject</label>
+                    <div class="ui-form__input grid-one-whole">
+                      <select id="enquiry" name="enquiry" class="select--alpha grid-three-tenths">
+                        <option value="general-enquiry">Enquiry type...</option>
                         <option value="general-enquiry">General Enquiry</option>
                         <option value="talk-submit">Submit Talk Idea</option>
                       </select>
                     </div>
                 </div>
-                <div class="ui-form__item grid-one-half align-flex spacing-alpha">
-                  <label for="name" class="grid-four-tenths align-flex__item text-right">Message</label>
-                    <div class="ui-form__input grid-one-half align-flex__item">
+                <div class="ui-form__item grid-one-whole spacing-alpha">
+                  <label for="name" class="label--alpha grid-one-whole">Message</label>
+                    <div class="ui-form__input grid-one-whole">
                       <textarea name="message" placeholder="Please enter your message" rows="8" class="grid-one-whole"></textarea>
                     </div>
                 </div>
                 <div class="ui-form__item grid-one-half">
-                  <input type="submit" name="submit" value="Submit" class="grid-three-tenths right ui-button--alpha" />
+                  <input type="submit" name="submit" value="Submit" class="grid-one-half ui-button--alpha" />
                 </div>
               </fieldset>
             </form>
@@ -282,6 +283,12 @@
 
         </div>
         <!-- /contact -->
+
+        <!-- footer -->
+        <div class="ui-cotainer--delta alt-container">
+          footer
+        </div>
+        <!-- /footer -->
 
       </div>
       <!-- /section -->

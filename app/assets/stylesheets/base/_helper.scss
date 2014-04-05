@@ -48,16 +48,54 @@
   text-align: right;
 }
 
+// Breakpoint alignment
+
+.align-break {
+
+  @include breakpoint(large) {
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+
+}
+
 // Vertical alignment
 
 .align-flex {
   display: flex;
   align-items: center;
+}
+
+.align-flex--center {
+  @extend .align-flex;
   justify-content: center;
+}
+
+.align-flex--break {
+  @extend .align-flex--center;
+
+  @include breakpoint(large) {
+    display: block;
+  }
+
 }
 
 .align-flex__item {
   max-width: 70%;
+}
+
+.align-flex__item--whole {
+  max-width: 100%;
+}
+
+.align-flex__item--break {
+  @extend .align-flex__item;
+
+  @include breakpoint(large) {
+    max-width: 100% !important;
+  }
+
 }
 
 // ------------------
@@ -135,58 +173,5 @@
     // background: rgba(0, 0, 0, .3);
     background: $color-bravo;
   }
-
-}
-
-// ------------------
-// Calculate rem value
-// ------------------
-
-@mixin calc-rem($property, $value, $context: $font-size-alpha) {
-    #{$property}: $value;
-    #{$property}: cr($value, $context);
-}
-
-// ------------------
-// Calculate em value
-// ------------------
-
-// $context is equal to the font size of parent element
-
-@function calc-em($target, $context) {
-	@return $target / $context * 1em;
-}
-
-// ------------------
-// Calculate percentage value
-// ------------------
-
-@function calc-percent($target, $context) {
-	@return $target / $context * 100%;
-}
-
-// ------------------
-// Media Queries
-// ------------------
-
-@mixin breakpoint($type, $fallback: false, $parent: true) {
-
-	@if $type == small {
-		@media(max-width: $break-alpha) {
-			@content;
-		}
-	}
-
-	@if $type == medium {
-		@media(min-width: $break-bravo) {
-			@content;
-		}
-	}
-
-	@if $type == large {
-		@media(min-width: $break-charlie) {
-			@content;
-		}
-	}
 
 }

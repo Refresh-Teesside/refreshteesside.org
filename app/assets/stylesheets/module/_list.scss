@@ -17,17 +17,30 @@
 
 .ui-list--alpha {
   @extend %ui-list;
+  @extend %clearfix;
   list-style-type: none;
   padding: 0;
   margin: 0;
+
+  @include breakpoint(large) {
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
 }
 
   .ui-list--alpha__item {
     float: left;
     margin-right: calc-em(40, 18);
+    display: inline-block;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    @include breakpoint(large) {
+      float: none;
     }
 
   }

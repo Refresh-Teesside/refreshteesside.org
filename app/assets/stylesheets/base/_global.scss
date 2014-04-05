@@ -29,4 +29,10 @@ img {
 
 .brand-img {
 	width: 150px;
+
+	@include breakpoint(large) {
+		margin: 0 auto;
+		padding-bottom: 20px;
+	}
+
 }

@@ -47,3 +47,40 @@
 .grid-nine-tenths {
 	width: 90%;
 }
+
+// ------------------
+// Flexible Grid
+// ------------------
+
+.grid-one-half--break {
+	@extend .grid-one-half;
+
+	@include breakpoint(large) {
+		padding-bottom: 40px;
+		width: 100% !important;
+
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+
+	}
+
+}
+
+.grid-three-tenths--break {
+	@extend .grid-three-tenths;
+
+	@include breakpoint(large) {
+		width: 100% !important;
+	}
+
+}
+
+.grid-seven-tenths--break {
+	@extend .grid-seven-tenths;
+
+	@include breakpoint(large) {
+		width: 100% !important;
+	}
+
+}
