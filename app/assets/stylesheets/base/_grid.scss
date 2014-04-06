@@ -16,41 +16,33 @@
 // Tenths
 // ------------------
 
-.grid-one-tenth {
-	width: 10%;
-}
-
-.grid-two-tenths {
-	width: 20%;
-}
-
-.grid-three-tenths {
-	width: 30%;
-}
-
-.grid-four-tenths {
-	width: 40%;
-}
-
-.grid-six-tenths {
-	width: 60%;
-}
-
-.grid-seven-tenths {
-	width: 70%;
-}
-
-.grid-eight-tenths {
-	width: 80%;
-}
-
-.grid-nine-tenths {
-	width: 90%;
-}
+.grid-one-tenth    { width: 10%; }
+.grid-two-tenths   { width: 20%; }
+.grid-three-tenths { width: 30%; }
+.grid-four-tenths  { width: 40%; }
+.grid-six-tenths   { width: 60%; }
+.grid-seven-tenths { width: 70%; }
+.grid-eight-tenths { width: 80%; }
+.grid-nine-tenths  { width: 90%; }
 
 // ------------------
 // Flexible Grid
 // ------------------
+
+.grid-one-quarter--break {
+	@extend .grid-one-quarter;
+
+	@include breakpoint(small) {
+		width: 100% !important;
+		display: block;
+	}
+
+	@include breakpoint(medium) {
+		width: 50%;
+		padding-bottom: 40px;
+	}
+
+}
 
 .grid-one-half--break {
 	@extend .grid-one-half;

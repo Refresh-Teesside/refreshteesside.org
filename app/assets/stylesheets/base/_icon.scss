@@ -23,67 +23,55 @@
 }
 
 // ------------------
-// Icon Chevron Down
+// Icons
 // ------------------
 
-.icon--chevron-down:before {
-	@extend %icon;
-	content: "\e600";
-	margin-top: calc-em(40, 20);
-}
+// Declare icon list
 
-// ------------------
-// Icon Chevron Right
-// ------------------
+$icons:
+	chevron-down,
+	chevron-right,
+	ellipsis,
+	twitter,
+	arrow-down,
+	google,
+	facebook;
 
-.icon--chevron-right:before {
-	@extend %icon;
-	content: "\e601";
-}
+// Loop through icon list and apply relevant character code
 
-// ------------------
-// Icon Ellipsis
-// ------------------
+@each $i in $icons {
+	.icon--#{$i}:after {
+		@extend %icon;
 
-.icon--ellipsis:before {
-	@extend %icon;
-	content: "\e602";
-}
+		@if $i == "chevron-down" {
+			content: "\e600"
+		}
 
-// ------------------
-// Icon Twitter
-// ------------------
+		@if $i == "chevron-right" {
+			content: "\e601"
+		}
 
-.icon--twitter:before {
-	@extend %icon;
-	content: "\e603";
-}
+		@if $i == "ellipsis" {
+			content: "\e602"
+		}
 
-// ------------------
-// Icon Google
-// ------------------
+		@if $i == "twitter" {
+			content: "\e603";
+		}
 
-.icon--google:before {
-	@extend %icon;
-	content: "\e605";
-}
+		@if $i == "arrow-down" {
+			content: "\e604"
+		}
 
-// ------------------
-// Icon Facebook
-// ------------------
+		@if $i == "google" {
+			content: "\e605";
+		}
 
-.icon--facebook:before {
-	@extend %icon;
-	content: "\e606";
-}
+		@if $i == "facebook" {
+			content: "\e606";
+		}
 
-// ------------------
-// Icon Arrow Down
-// ------------------
-
-.icon--arrow-down:before {
-	@extend %icon;
-	content: "\e604";
+	}
 }
 
 // ------------------
@@ -93,7 +81,6 @@
 .icon--light {
 	color: $color-delta;
 }
-
 
 // ------------------
 // Icon Large
