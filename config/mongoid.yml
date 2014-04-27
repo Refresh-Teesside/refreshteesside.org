@@ -66,12 +66,10 @@ development:
 production:
   sessions:
     default:
-      uri: 'mongodb://heroku:1r0nnlfBRCK5gIzeE-k_C5gxzdoNkr233Yq6yKt1NoN8LqVwP6q5HFQJn85BQ-XnqH0X1T5WcNmQk2Khb82z7A@oceanic.mongohq.com:10021/app24606121'
+      uri: <%= ENV['MONGOHQ_URL'] %>
       options:
-        consistency: :strong
-        max_retries: 30
-        retry_interval: 1
-        timeout: 15
+        skip_version_check: true
+        safe: true
 
 test:
   sessions:
