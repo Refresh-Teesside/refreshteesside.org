@@ -28,7 +28,6 @@ gem "powder"
 gem "twitter"
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 
-gem 'rails_12factor', group: :production
 
 
 group :doc do
