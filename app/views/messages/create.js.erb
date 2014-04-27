@@ -1,6 +1,8 @@
 <% if @message.save %>
-  $("#message_email").val("");
-  $("#message_body").val("");
+  $(".js-email").val("");
+  $(".js-name").val("");
+  $(".js-body").val("");
+  $(".js-subject").prop('selectedIndex', 0);
   $(".js-message-holder").html('<%= j render("success") %>');
 <% else %>
   $(".js-message-holder").html('<%= j render("fail") %>');

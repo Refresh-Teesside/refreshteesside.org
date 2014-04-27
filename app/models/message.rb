@@ -3,6 +3,8 @@ class Message
   include Mongoid::Timestamps
   include Mongoid::Slug
 
+  field :name
+  field :subject
   field :email
   field :body
 
@@ -10,4 +12,4 @@ class Message
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create,
                               message: "This doesn't look like an email.  Do you mind trying again?" }
   validates :body, presence: { message: "We don't see anything here, try entering your message." }
-end 
+end

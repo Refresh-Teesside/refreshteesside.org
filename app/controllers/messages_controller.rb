@@ -4,16 +4,19 @@ respond_to :js
   def new
     @message = Message.new
   end
-  
+
   def create
     @message = Message.new(message_params)
     respond_with @message
+  end
+
+  def show
   end
 
   private
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
-      params.require(:message).permit(:email, :body)
+      params.require(:message).permit(:name, :subject, :email, :body)
     end
 end
