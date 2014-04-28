@@ -10,11 +10,11 @@
 
 @font-face {
 	font-family: 'refresh-teesside';
-	src:asset-url('/assets/icon/refresh-teesside.eot');
-	src:asset-url('/assets/icon/refresh-teesside.eot') format('embedded-opentype'),
-			asset-url('/assets/icon/refresh-teesside.woff') format('woff'),
-			asset-url('/assets/icon/refresh-teesside.ttf') format('truetype'),
-			asset-url('/assets/icon/refresh-teesside.svg#refresh-teesside') format('svg');
+	src:font-url('/icon/refresh-teesside.eot');
+	src:font-url('/icon/refresh-teesside.eot') format('embedded-opentype'),
+			font-url('/icon/refresh-teesside.woff') format('woff'),
+			font-url('/icon/refresh-teesside.ttf') format('truetype'),
+			font-url('/icon/refresh-teesside.svg#refresh-teesside') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
