@@ -25,6 +25,7 @@ module Refresh
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js']
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
     # config.assets.precompile += %w( *.css *.js, *.sass )
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
     config.assets.enabled = true
