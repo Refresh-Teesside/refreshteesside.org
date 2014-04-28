@@ -12,6 +12,13 @@ class EventsController < ApplicationController
     @about = About.last
     @message = Message.new
 
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV['T_KEY']
+      config.consumer_secret     = ENV['T_SECRET']
+      config.access_token        = ENV['TAC']
+      config.access_token_secret = ENV['TACS']
+    end
+
     @last_tweet = client.user_timeline("refreshteesside", count: 1).first
 
     respond_with @event
