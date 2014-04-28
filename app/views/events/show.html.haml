@@ -78,7 +78,7 @@
               %li.ui-list__item.grid-one-quarter--break.left
                 .ui-list__item__image.spacing-bravo
                   = image_tag(s.file.url)
-                %h2.heading--three= s.name
+                %h2.heading--three=link_to s.name, "http://twitter.com/#{s.twitter}"
             - if @event.speakers.count < 4
               - (4 - @event.speakers.count).times do
                 %li.ui-list__item.grid-one-quarter--break.left
