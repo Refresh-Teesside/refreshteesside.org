@@ -12,5 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require scroll
-//= require event
+//= require_tree .
