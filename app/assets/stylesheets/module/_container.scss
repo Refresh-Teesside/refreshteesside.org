@@ -81,14 +81,14 @@
 
 .photo-container--alpha {
 	@extend %photo-container;
-	background: asset_path("refresh-about.jpg") no-repeat 0 20%;
+	background: asset-url("refresh-about.jpg") no-repeat 0 20%;
 	background-size: cover;
 	position: relative;
 }
 
 .photo-container--bravo {
 	position: relative;
-	background: asset_path("hero-image.jpg") no-repeat 50% 0;
+	background: asset-url("hero-image.jpg") no-repeat 50% 0;
 
 	&:after {
 		content: "";
