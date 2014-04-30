@@ -1,10 +1,10 @@
 require 'eventbrite-client'
 
 eb_auth_tokens = { app_key: ENV['EBAT']}
-@eb_client = EventbriteClient.new(eb_auth_tokens)
+EBCLIENT = EventbriteClient.new(eb_auth_tokens)
 
 
-@client = Twitter::REST::Client.new do |config|
+TCLIENT = Twitter::REST::Client.new do |config|
   config.consumer_key        = ENV['T_KEY']
   config.consumer_secret     = ENV['T_SECRET']
   config.access_token        = ENV['TAC']

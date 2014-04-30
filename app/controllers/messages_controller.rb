@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-respond_to :js
+respond_to :js 
 
   def new
     @message = Message.new
@@ -8,9 +8,6 @@ respond_to :js
   def create
     @message = Message.new(message_params)
     respond_with @message
-  end
-
-  def show
   end
 
   private

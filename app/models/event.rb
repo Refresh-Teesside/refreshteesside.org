@@ -16,9 +16,7 @@ class Event
   validates_presence_of :date, :eventbrite_id
 
     def sign_up_count
-      eb_auth_tokens = { app_key: ENV['EBAT']}
-      eb_client = EventbriteClient.new(eb_auth_tokens)
-      response = eb_client.event_get({id: eventbrite_id })
+      response = EBCLIENT.event_get({id: eventbrite_id })
       response["event"]["num_attendee_rows"].to_i
     end
 
