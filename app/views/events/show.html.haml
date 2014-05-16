@@ -74,17 +74,33 @@
           %h1.heading--four.spacing-bravo.heading-underline This Month's Speakers
         .ui-container--alpha
           %ul.ui-list--bravo{"data-ui-component" => "speaker-list"}
-            - @event.speakers.each do |s|
-              %li.ui-list__item.grid-one-quarter--break.left
-                .ui-list__item__image.spacing-bravo
-                  = image_tag(s.file.url)
-                %h2.heading--three=link_to s.name, "http://twitter.com/#{s.twitter}"
-            - if @event.speakers.count < 4
-              - (4 - @event.speakers.count).times do
-                %li.ui-list__item.grid-one-quarter--break.left
-                  .ui-list__item__image.spacing-bravo
-                    = image_tag("tbc.png")
-                  %h2.heading--three to be confirmed
+            %li.ui-list__item.grid-one-quarter--break.left
+              .ui-list__item__image.spacing-bravo
+                = image_tag("RachelBurns@AudaciousBurns.png")
+              %h2.heading--three=link_to "Rachel Burns", "http://twitter.com/@AudaciousBurns"
+            %li.ui-list__item.grid-one-quarter--break.left
+              .ui-list__item__image.spacing-bravo
+                = image_tag("Stephen-Irving@IrvingArt.png")
+              %h2.heading--three=link_to "Stephen Irving", "http://twitter.com/@Irving_Art"
+            %li.ui-list__item.grid-one-quarter--break.left
+              .ui-list__item__image.spacing-bravo
+                = image_tag("PhilipPoots@pootsbook.png")
+              %h2.heading--three=link_to "Philip Poots", "http://twitter.com/@pootsbook"
+            %li.ui-list__item.grid-one-quarter--break.left
+              .ui-list__item__image.spacing-bravo
+                = image_tag("GavinElliott@gavinelliott.png")
+              %h2.heading--three=link_to "Gavin Elliott", "http://twitter.com/@gavinelliott"
+            / - @event.speakers.each do |s|
+            /   %li.ui-list__item.grid-one-quarter--break.left
+            /     .ui-list__item__image.spacing-bravo
+            /       = image_tag(s.file.url)
+            /     %h2.heading--three=link_to s.name, "http://twitter.com/#{s.twitter}"
+            / - if @event.speakers.count < 4
+            /   - (4 - @event.speakers.count).times do
+            /     %li.ui-list__item.grid-one-quarter--break.left
+            /       .ui-list__item__image.spacing-bravo
+            /         = image_tag("tbc.png")
+            /       %h2.heading--three to be confirmed
 
       //speakers
       / schedule
