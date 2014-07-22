@@ -37,6 +37,9 @@ GEM
       tzinfo (~> 0.3.37)
     addressable (2.3.6)
     arel (4.0.2)
+    aws-sdk (1.48.1)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     bcrypt (3.1.7)
     bson (2.2.2)
     buftok (0.2.0)
@@ -231,6 +234,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk
   coffee-rails (~> 4.0.0)
   devise
   eventbrite-client

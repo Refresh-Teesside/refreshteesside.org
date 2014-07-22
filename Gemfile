@@ -18,6 +18,7 @@ gem "devise"
 gem "powder"
 gem "twitter"
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem 'aws-sdk'
 gem 'rails_12factor', group: :production
 
 group :doc do
